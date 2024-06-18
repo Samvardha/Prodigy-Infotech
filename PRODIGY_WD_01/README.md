@@ -1,5 +1,6 @@
 <h2 align="center">
   Gaming Console Hub Landing Page
+  <a href="https://shoeandco.netlify.app/" target="_blank">Shoe and Co.</a><br /><br />
 </h2>
 
 <div align="center">
