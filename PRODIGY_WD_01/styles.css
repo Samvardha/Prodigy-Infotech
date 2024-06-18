@@ -1,0 +1,198 @@
+/*html Styling*/
+html {
+    background-color: #FFF5E1;
+    user-select: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Navigation Menu Styling*/
+.nav-menu {
+    display: flex;     
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    background-color: #FFF5E1;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+h1 {
+    margin: 0;
+}
+
+span {
+    color: #0C1844;
+    font-family: "Dancing Script", cursive;
+}
+
+.co-name {
+    color: #C80036;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 50px;
+}
+
+.items {
+    color: #0C1844;
+    display: inline-block;
+    font-weight: 800;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    text-transform: uppercase;
+}
+
+.items:hover {
+    color: #C80036;
+    transform: perspective(400px) scale(1.1);
+}
+
+/*Home Section Styling*/
+.heading {
+    font-size: 5rem;
+    text-align: center;
+    margin: 8rem 0 0 0;
+}
+
+#info {
+    padding: 0;
+    text-align: center;
+    font-size: 2.25rem;
+}
+
+.collection {
+    font-size: 1.5rem;
+    padding: 4rem 0 0 0;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+#btn {
+    margin-top: 2rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 2px solid #C80036;
+    cursor: pointer;
+    background-color: transparent;
+    color: #C80036;
+    font-size: 1rem;
+    transition: background-color 200ms ease-in-out;
+}
+
+#btn:hover {
+    background-color: #C80036;
+    color: white;
+}
+
+/*About Section Styling*/
+h3 {
+    position: relative;
+    text-align: center;
+    margin: 15rem 0 3rem 0 ;
+    font-size: 2.5rem;
+    color: #C80036;
+    text-decoration: overline;
+}
+
+.ab-info{
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 0;
+    width: 100%;
+    text-align: justify;
+}
+
+/*Categories Section and Shoes Section Styling*/
+.images {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 15rem 0 15rem;
+    margin: 0;
+}
+
+.gen-info {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15rem 2rem 15rem;
+    margin: 0;
+}
+
+/*Contact Us Section Styling*/
+.cont {
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-right: 3rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.links > a {
+    margin: 0 1rem 0 1rem;
+    padding: 0 0 0 0;
+    color: black;
+}
+
+/*Scroll to top Button Styling*/
+#TopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e5ab375e;
+    color: #0C1844; 
+    border: none; 
+    border-radius: 50%; 
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: 200ms background-color ease-in-out;
+}
+
+#TopBtn:hover {
+    background-color: #e5ab37;
+    color: white;
+}
+
+/*Fade-in Animation for Sections*/
+section:not(.nav-menu):not(footer) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+section:not(.nav-menu):not(footer).show {
+    opacity: 1;
+}
+
+/*Footer Styling*/
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0 0.25rem 0;
+    margin: 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
