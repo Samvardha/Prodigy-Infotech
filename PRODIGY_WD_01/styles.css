@@ -161,6 +161,7 @@ h3 {
 
 /*Scroll to top Button Styling*/
 #TopBtn {
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
