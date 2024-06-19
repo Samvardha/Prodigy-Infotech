@@ -1,0 +1,96 @@
+/*Base Styling*/
+body {
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    background: radial-gradient(circle at center, rgb(120, 166, 241), #073b9c, #060147);
+    color: black;
+    user-select: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/*Primary Class Styling*/
+.primary {
+    width: 320px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 0;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#watch {
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/*Button Styling*/
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 75px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button.active {
+    background-color: #484e48;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+button.active:hover {
+    background-color: #525a52b6;
+}
+
+/*Laps List Styling*/
+#laps {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    color: white;
+}
+
+#laps li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
