@@ -1,6 +1,6 @@
 <h2 align="center">
   Stopwatch Web Application<br />
-  <a href="https://stopwatchweb-sk.netlify.app/" target="_blank">Stopwatch Web Application</a><br /><br />
+  <a href="https://stopwatchweb-sk.netlify.app/" target="_blank">Stopwatch Demo</a><br /><br />
 </h2>
 
 <div align="center">

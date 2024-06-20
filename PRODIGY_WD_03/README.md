@@ -1,6 +1,6 @@
 <h2 align="center">
   Tic-Tac-Toe Web Application<br />
-  <a href="https://tictactoeweb-sk.netlify.app/" target="_blank">Tic-Tac-Toe</a><br /><br />
+  <a href="https://tictactoeweb-sk.netlify.app/" target="_blank">Tic-Tac-Toe Demo</a><br /><br />
 </h2>
 
 <div align="center">
