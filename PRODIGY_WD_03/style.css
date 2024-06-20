@@ -1,0 +1,116 @@
+/*Base Styling*/
+body {
+    display: flex;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Gradient Animation Background*/
+.background {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/*Primary Class Styling*/
+.primary {
+    width: 325px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.832);
+}
+
+/*Secondary Class Styling*/
+.secondary {
+    display: grid;
+    width: 320px;
+    background-color: transparent;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5px;
+    margin: 25px 0;
+}
+
+/*Grid Styling*/
+.grd {
+    height: 105px;
+    width: 105px;
+    background-color: rgba(240, 248, 255, 0.645);
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: transform 200ms, background-color 200ms ease-in-out;
+    z-index: 1;
+}
+
+.grd:hover {
+    background-color: rgba(255, 255, 255, 0.904);
+    transform: scale(0.9);
+}
+
+.winning-cell {
+    background-color: #00bbffc9;
+}
+
+.secondary.game-over .grd {
+    pointer-events: none;
+}
+
+/*Button Styling*/
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 10px;
+    font-size: 1.15rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.519);
+    color: white;
+    transition: background-color 300ms ease, color 200ms ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.408);
+    color: black;
+}
