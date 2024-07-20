@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="./assets/logo.png" type="image/x-icon">
+    <title>Weathery - The Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+
+<body class="background">
+    
+    <!--Display Bar-->
+    <div class="bar">
+        <div class="name">
+            <img id="websiteLogo" src="./assets/logo.png" alt="Website Logo">
+            <span id="app">Weathery</span>
+        </div>
+
+        <div class="loc"><div class="currentLoc"></div></div>
+
+        <div class="name more-info">
+            <div class="search">
+                <input type="text" placeholder="Enter Location">
+                <button id="searchBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000a2" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="date-time">
+                <div class="currentDay"></div>
+                <div class="currentDate"></div>
+                <div class="currentTime"></div>
+            </div>
+        </div> 
+    </div>
+
+    <!--Contents-->
+    <div class="contents">
+        <div class="major">
+            <div class="btnInfo">
+                <button id="tempChange" class="change" title="Toggle between Celsius and Fahrenheit">°C</button>
+                <button id="timeChange" class="change new" title="Toggle between 12-hour and 24-hour time formats">12 Hour</button>
+
+                <div class="btnRows">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#00000092" class="bi bi-info-circle social" id="creator" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+
+                    <div class="creator">Made by: Samvardha Khandwe</div>
+
+                    <a href="https://github.com/Samvardha" title="Link to Github">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#00000092" class="bi bi-github social" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="btnRows btnEdit">
+                    <a href="https://www.linkedin.com/in/samvardha-khandwe-89404127b/" title="Link to LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#00000092" class="bi bi-linkedin social" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://twitter.com/samvardhak26" title="Link to Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#00000092" class="bi bi-twitter-x social" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>
+                    </a>
+                </div>                
+            </div>
+            
+            <!--API Data-->
+            <div id="api-data">
+                <div class="row-zero">
+                    <span id="heading">City:</span></span>
+                    <span id="cityName"></span>
+                </div>
+            
+            
+                <div class="primary">
+                    <div class="row-one">
+                        <span id="temp"></span>
+                        <img id="weatherIcon" alt="Weather Icon">
+                    </div>
+
+                    <div class="row-two">
+                        <div id="weatherStat">
+                            <div id="weatherStat-text"></div>
+                        </div>
+
+                        <span id="tempFeel"><span id="tempFeelValue"></span>  
+                    </div>
+                </div>
+
+                <div class="secondary">
+                    <div class="column">
+                        <span id="humidity"></span>
+                        <span id="tempMin"><span id="tempMinValue"></span></span>
+                        <span id="sunrise"><span id="sunriseTime"></span>
+                    </div>
+    
+                    <div class="column">
+                        <span id="pressure"></span>
+                        <span id="tempMax"><span id="tempMaxValue"></span></span>
+                        <span id="sunset"><span id="sunsetTime"></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Forecast Data-->
+        <div id="forecast-data">
+            <span id="heading">5-Day Forecast</span>
+
+            <div class="info">
+                <div class="container">
+                    <span class="day"></span>
+
+                    <div class="tertiary">
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <span class="day"></span>
+
+                    <div class="tertiary">
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <span class="day"></span>
+
+                    <div class="tertiary">
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <span class="day"></span>
+
+                    <div class="tertiary">
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <span class="day"></span>
+
+                    <div class="tertiary">
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+
+                        <div class="quad">
+                            <span class="forecastTime"></span>
+                            <img class="forecastWeatherIcon" alt="Weather Icon">
+                            <span class="forecastTemp"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
